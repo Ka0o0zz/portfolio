@@ -33,7 +33,10 @@ p {
 
 
 
+
+
   .header_layout {
+    margin-top: 80px;
     display: grid;
     grid-auto-columns: 1fr;
     grid-column-gap: 3rem;
@@ -43,6 +46,13 @@ p {
     //-ms-grid-rows: auto;
     grid-template-rows: auto;
 
+    .div-header-layout {
+      img {
+        max-width: 482px !important;
+        max-height: 439px !important;
+      }
+    }
+
     @media screen and (max-width: 991px) {
       min-height: auto;
       grid-auto-flow: row;
@@ -51,6 +61,10 @@ p {
 
       .div-header-layout {
         text-align: center;
+
+        img {
+          width: 100%;
+        }
       }
     }
 
@@ -162,4 +176,96 @@ p {
 
   width: 100%;
   max-width: 80rem;
+}
+
+
+header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #18182590;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid #181825;
+  position: fixed;
+  z-index: 2;
+
+  color: #fff;
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  padding: 30px;
+  padding-right: 5%;
+  padding-left: 5%;
+
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      li {
+        margin: 0 8px;
+        display: flex;
+        flex-direction: column;
+
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          color: #fff;
+        }
+
+        span {
+          display: inline-block;
+          visibility: hidden;
+          width: 100%;
+          height: 3px;
+          background-color: #6966ff;
+          border-radius: 3px;
+        }
+
+        &:hover {
+          span {
+            visibility: visible;
+          }
+
+
+        }
+      }
+    }
+
+    button {
+      display: none;
+
+      @media screen and (max-width: 991px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 8px;
+
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+
+        border: 2px solid #656565;
+        border-radius: 5px;
+
+        span {
+          display: inline-block;
+          width: 100%;
+          height: 2.5px;
+          background-color: #656565;
+          ;
+        }
+      }
+    }
+  }
 }

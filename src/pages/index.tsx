@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import Image from "next/image";
@@ -11,6 +12,43 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header>
+        <h2>David Morales</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+              <span />
+            </li>
+            <li>
+              <a href="#">About me</a>
+              <span />
+            </li>
+            <li>
+              <a href="#">Skills</a>
+              <span />
+            </li>
+            <li>
+              <a href="#">Experience</a>
+              <span />
+            </li>
+            <li>
+              <a href="#">Projects</a>
+              <span />
+            </li>
+            <li>
+              <a href="#">Contact</a>
+              <span />
+            </li>
+          </ul>
+
+          <button>
+            <span />
+            <span />
+            <span />
+          </button>
+        </nav>
+      </header>
       <main>
         <section className="home">
           <div className="container-large">
@@ -52,11 +90,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="div-header-layout">
-                <Image
+                <img
                   src="/main-image.png"
                   alt="main image"
-                  width={482}
-                  height={439}
                 />
               </div>
             </div>
